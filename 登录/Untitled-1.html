@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>统一身份认证平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+			background-image:url(indexbanner3.jpg);
+			background-size: cover;
+            background-attachment:fixed;
+        }
+        .container {
+            height: 100%;
+            
+        }
+        .login-wrapper {
+            background-color: rgb(255, 255, 255);
+            width: 358px;
+            height: 488px;
+           
+            padding: 0 50px;
+            position:relative;
+            left: 75%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .header {
+            font-size: 28px;
+            font-weight:lighter;
+            text-align: center;
+            line-height: 200px;
+        }
+        .input-item {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 0;
+            padding: 10px;
+            border: 1px solid rgb(128, 125, 125);
+            font-size: 15px;
+            outline: none;
+            
+        }
+        .input-item:placeholder {
+            text-transform: uppercase;
+        }
+        .btn {
+            display: block;
+            text-align: center ;
+            margin-top: 40px;
+            width: 105%;
+            padding: 10px;
+            color: rgba(14, 136, 61, 0.998);
+            
+        }
+        .msg {
+            float:left;
+            line-height: 88px;
+        }
+        .mtg {
+            float: right;
+            line-height: 88px;
+        }
+        .a {
+            width:300px;
+            height: 100px;
+        }
+        .b{
+            text-align: right;
+            color:blue;
+            display: block;
+        }
+        .c{
+            float:right;
+        }
+        .d{
+            float: left;
+        }
+        a{
+            text-decoration: none;
+        }
+        .sc{
+            color: blue;
+        }
+        .im{
+            position: relative;
+            left:6.2cm;
+        }
+        .ig{
+            position: relative;
+            left: 9.2cm;
+        }
+    </style>
+</head>
+<body>
+     <pre>          
+             <img src="C:\Users\86181\Desktop\3\logo.png" class="a"></pre>  
+    <div class="container">
+        <div class="login-wrapper">
+            <img src="C:\Users\86181\Desktop\3\pass.png" class="ig" id="ig" style="display:none">
+            <img src="C:\Users\86181\Desktop\3\getCode.png" id="2" style="display: none;">
+            <div  id="en">  
+                <p class="msg header sc" id="zh" style="color: blue;">账号登录</p>
+                <p class="mtg header" id="dt"  >动态码登录..</p>
+                <img src="C:\Users\86181\Desktop\3\ewm.png" class="im" id="im">
+                <input type="text" name="username" placeholder="学号" class="input-item" id="a">
+                <input type="password" name="password" placeholder="密码" class="input-item" id="b">
+                <input type="text" name="password" placeholder="短信验证码" class="input-item" id="c" style="display: none;">
+                <input type="button" class="btn" value="登录">
+                
+            
+            <br>
+            <div class="c"><a href=""class="b" >账号申请</a><br>
+            <a href="" class="b">账号激活</a></div>
+            <div class="d">
+            <a href="">账号申诉</a><br><br>
+            <a href="">忘记密码</a></div></div>
+        </div>
+    </div>
+    <script>
+        var a=document.getElementById("a");
+        var b=document.getElementById("b");
+        var c=document.getElementById("c");
+        var zh=document.getElementById("zh");
+        var dt=document.getElementById("dt");
+        var en=document.getElementById("en");
+        var im=document.getElementById("im");
+        var ig=document.getElementById("ig");
+        var er=document.getElementById("2");
+         dt.onclick=function(){
+            a.placeholder="手机号/学号";
+            b.placeholder="验证码";
+            b.type="text";
+            this.style="color: blue;";
+            zh.style="color:black";
+            c.style.display="block";
+         }
+         zh.onclick=function(){
+            a.placeholder="学号";
+            b.placeholder="密码";
+            b.type="password";
+            this.style="color: blue;";
+            dt.style="color:black";
+            c.style="display: none";
+         }
+         im.onclick=function(){
+            en.style.display="none";
+           ig.style.display="block";
+           er.style.display="block";
+         }
+         ig.onclick=function(){
+            en.style.display="block";
+           this.style.display="none";
+           er.style.display="none";
+         }
+
+    </script>
+</body>
+</html>

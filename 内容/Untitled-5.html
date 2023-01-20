@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="1.css">
+<body>
+	<img src="23.png" class="a">
+	<div class="c">
+		<br><br>
+		<p class="d"> 姓名</p>
+		<select class="d e">
+			<option value="1">空闲</option>
+			<option value="2">工作</option>
+			<option value="3">上班</option>
+			<option value="4">开会</option>
+		</select>
+	<pre><a href="">个人信息</a> | <a href="">退出登录</a></pre>
+	</div>
+	<div class="f" id="da">
+		<img src="3.png" ><br>
+		<div class="fl">
+			<div class="bu">
+			<a href=""><img src="30.png" height="52px">
+			<p>新生自助..</p></a>
+		</div>
+		<a href=""><div class="bu" >
+			<img src="17.png" height="52px" >
+			<p>本科生教务</p></a>
+		</div></a>
+		<a href=""><div class="bu">
+			<img src="31.png" height="52px" >
+			<p>离校系统</p></a>
+		</div>
+		</div><br>
+		<div class="fl">
+			<div class="bu" >
+			<a href="" ><img src="4.png" height="52px" >
+			<p>网上缴费</p></a>
+		</div>
+		<a href=""><div class="bu">
+			<img src="7.png" height="52px">
+			<p>可视化平台</p></a>
+		</div></a>
+		<a href=""><div class="bu">
+			<img src="19.png">
+			<p>档案系统</p></a>
+		</div>
+		</div><br>
+		
+		<div style="text-align: center;">
+			<a id="a">①</a>
+			<a id="b">②</a>
+		</div>
+	</div><br>
+	<a href=""><div class="g"><img src="1.png"></div></a><br>
+	<a href=""><div class="g"><img src="2.png"></div></a>
+	<img src="45.png" class="b">
+	<script>
+		var a=document.getElementById("a");
+        var b=document.getElementById("b");
+		var da=document.getElementById("da");
+		var p = da.getElementsByTagName("p"); 
+		var im = da.getElementsByTagName("img");
+		b.onclick=function(){
+			p[0].innerHTML="图书馆";
+			p[1].innerHTML="校园卡";
+			im[1].src="5.png";
+			im[2].src="8.png";
+			for(var i=2;i<=6;i++){
+				p[i].style.display="none";
+				im[i+1].style.display="none";
+			}
+			}
+			a.onclick=function(){
+			p[0].innerHTML="新生自助..";
+			p[1].innerHTML="本科生教务";
+			im[1].src="30.png";
+			im[2].src="17.png";
+			for(var i=2;i<=6;i++){
+				p[i].style.display="block";
+				im[i+1].style.display="block";
+			}
+			}
+
+
+	</script>
+</body>
